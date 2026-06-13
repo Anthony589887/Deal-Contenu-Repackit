@@ -25,10 +25,16 @@
   .lead{font-size:15.5px;margin-bottom:24px}
   .lead b{color:var(--dark)}
 
-  .stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+  .stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
   .stat{flex:1;min-width:150px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--orange);border-radius:10px;padding:14px 16px}
   .stat .n{font-size:20px;font-weight:800;color:var(--dark)}
   .stat .l{font-size:12px;color:var(--grey);margin-top:2px}
+
+  .formula{background:var(--dark);border-radius:14px;padding:24px 22px;margin-bottom:8px;text-align:center}
+  .formula .lbl{color:#bbb;font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+  .formula .eq{color:#fff;font-size:22px;font-weight:800;line-height:1.35}
+  .formula .eq b{color:var(--orange)}
+  .formula .sub{color:#999;font-size:12.5px;margin-top:10px}
 
   h2{color:var(--orange);font-size:19px;margin:34px 0 14px}
   table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
@@ -39,25 +45,11 @@
   td b{color:var(--dark)}
   .note{font-size:12.5px;color:var(--grey);margin-top:8px}
 
-  /* Échelle milestones */
-  .ladder{background:var(--dark);border-radius:14px;padding:26px 22px;margin-top:6px}
-  .ladder h3{color:#fff;font-size:16px;margin-bottom:4px}
-  .ladder p{color:#bbb;font-size:12.5px;margin-bottom:18px}
-  .rung{display:flex;align-items:center;gap:14px;padding:12px 14px;border-radius:10px;margin-bottom:8px;background:#1f1f1f;border:1px solid #2c2c2c}
-  .rung .views{min-width:92px;font-weight:800;color:var(--orange);font-size:17px}
-  .rung .views small{display:block;color:#999;font-weight:400;font-size:10.5px;letter-spacing:.4px}
-  .rung .arrow{color:#555;font-size:14px}
-  .rung .prize{font-weight:800;color:#fff;font-size:16px;display:flex;align-items:center;gap:8px}
-  .rung .prize .emoji{font-size:20px}
-  .rung.big{background:linear-gradient(90deg,#2a1505,#1f1f1f);border-color:var(--orange)}
-  .rung.big .prize{color:var(--orange)}
-  .ladder .foot{color:#999;font-size:11.5px;margin-top:12px}
-
   .cta{background:var(--orange);color:#fff;border-radius:12px;padding:20px 22px;font-size:15.5px;margin-top:38px}
   .cta b{font-size:17px}
 
   footer{margin-top:34px;color:var(--grey);font-size:11.5px;display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px}
-  @media(max-width:560px){ h1{font-size:23px} .htag{text-align:left} }
+  @media(max-width:560px){ h1{font-size:23px} .htag{text-align:left} .formula .eq{font-size:18px} }
 </style>
 </head>
 <body>
@@ -74,13 +66,19 @@
 
 <div class="wrap">
 
-  <h1>Gère nos comptes TikTok.<br>Payé dès le 1er mois. Des bonus jusqu'à une voiture.</h1>
-  <p class="lead">Tu tournes, montes et postes <b>2 vidéos courtes par jour</b> (formats et hooks fournis) sur 2 comptes TikTok, republiées en YouTube Shorts et Reels Instagram. <b>≈ 30-45 min par jour.</b> Rémunération simple : un fixe mensuel garanti, des bonus à chaque vidéo qui perce, et une échelle de récompenses qui monte jusqu'à une voiture.</p>
+  <h1>Gère nos comptes TikTok.<br>Un deal simple : 100 €/mois + 1 € pour 1000 vues.</h1>
+  <p class="lead">Tu tournes, montes et postes <b>2 vidéos courtes par jour</b> (formats et hooks fournis) sur 2 comptes TikTok, republiées en YouTube Shorts et Reels Instagram. <b>≈ 30-45 min par jour.</b> Et la rémunération est limpide : un fixe garanti chaque mois, plus 1 € pour chaque tranche de 1000 vues. Plus tes comptes tournent, plus tu gagnes, sans plafond.</p>
 
   <div class="stats">
     <div class="stat"><div class="n">100 €/mois</div><div class="l">garantis dès le mois 1</div></div>
+    <div class="stat"><div class="n">+ 1 € / 1000 vues</div><div class="l">sur toutes tes vues du mois</div></div>
     <div class="stat"><div class="n">30-45 min</div><div class="l">par jour, formats fournis</div></div>
-    <div class="stat"><div class="n">🚗 + 💻 + 📱</div><div class="l">l'échelle de bonus aux vues</div></div>
+  </div>
+
+  <div class="formula">
+    <div class="lbl">Ton revenu chaque mois</div>
+    <div class="eq"><b>100 €</b> &nbsp;+&nbsp; (tes vues du mois &divide; 1000) &nbsp;=&nbsp; <b>ton chèque</b></div>
+    <div class="sub">Exemple : 500 000 vues dans le mois → 100 € + 500 € = <b style="color:#fff">600 €</b></div>
   </div>
 
   <h2>Ta mission</h2>
@@ -89,40 +87,27 @@
     <tr><td><b>Poster</b></td><td>1 vidéo/jour sur chacun des 2 comptes TikTok (= 2 posts/jour, ~60/mois)</td></tr>
     <tr><td><b>Republier</b></td><td>Les mêmes vidéos en YouTube Shorts + Reels IG, sans watermark TikTok</td></tr>
     <tr><td><b>Suivre le brief</b></td><td>Formats, hooks et angles fournis chaque semaine. Montage varié entre les 2 comptes</td></tr>
-    <tr><td><b>Envoyer les liens</b></td><td>Tu envoies le lien de chaque TikTok une fois posté (ça déclenche la validation et le comptage)</td></tr>
+    <tr><td><b>Envoyer les liens</b></td><td>Tu envoies le lien de chaque TikTok une fois posté (ça déclenche la validation et le comptage des vues)</td></tr>
   </table>
   <p class="note">Ce que tu n'as <b>pas</b> à faire : trouver les idées, la stratégie, l'analyse des stats. C'est notre taf. Toi tu exécutes et tu postes, tous les jours.</p>
 
-  <h2>Ce que tu gagnes chaque mois</h2>
+  <h2>Ce que tu gagnes</h2>
   <table>
-    <tr><th style="width:160px">Brique</th><th style="width:170px">Montant</th><th>Condition</th></tr>
-    <tr><td><b>Fixe mensuel</b></td><td><b>100 € / mois garantis</b></td><td>Pour <b>60 posts uniques validés</b> dans le mois = <b>180 publications au total</b> avec le cross-platform (TikTok + Shorts + Reels, la même vidéo comptée une fois). Au prorata si moins de 60</td></tr>
-    <tr><td><b>Bonus virale</b></td><td><b>+ 25 € / vidéo</b></td><td>Chaque vidéo qui dépasse 100 000 vues, sur n'importe quelle plateforme</td></tr>
+    <tr><th style="width:170px">Brique</th><th style="width:150px">Montant</th><th>Détail</th></tr>
+    <tr><td><b>Fixe mensuel</b></td><td><b>100 € / mois</b></td><td>Garantis, pour <b>60 posts uniques validés</b> dans le mois = <b>180 publications au total</b> avec le cross-platform (TikTok + Shorts + Reels). Au prorata si moins de 60</td></tr>
+    <tr><td><b>Part aux vues</b></td><td><b>1 € / 1000 vues</b></td><td>Sur <b>toutes les vues générées dans le mois</b>, tous comptes et toutes plateformes confondus (TikTok + Shorts + Reels). Aucun plafond</td></tr>
   </table>
-
-  <h2>L'échelle des bonus (là où ça devient fun)</h2>
-  <div class="ladder">
-    <h3>Tes vues s'additionnent pour toujours. Chaque palier franchi = le bonus tombe.</h3>
-    <p>Vues cumulées depuis ton premier post, tous comptes et toutes plateformes confondus. Chaque palier se gagne une fois, et ils s'additionnent tous.</p>
-    <div class="rung"><div class="views">1M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">200 €</div></div>
-    <div class="rung"><div class="views">5M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">500 €</div></div>
-    <div class="rung big"><div class="views">10M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize"><span class="emoji">📱</span> iPhone 17</div></div>
-    <div class="rung"><div class="views">25M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">1 000 €</div></div>
-    <div class="rung big"><div class="views">50M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize"><span class="emoji">💻</span> MacBook Air</div></div>
-    <div class="rung big"><div class="views">100M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize"><span class="emoji">🚗</span> Une voiture</div></div>
-    <div class="foot">Exemple : tu atteins 10M de vues cumulées → tu as déjà encaissé 200 € + 500 € + l'iPhone 17. Rien ne se perd, tout s'empile.</div>
-  </div>
+  <p class="note">Simple à calculer : tu prends tes vues du mois, tu divises par 1000, tu ajoutes 100 €. C'est ton revenu.</p>
 
   <h2>Concrètement, ta trajectoire</h2>
   <table>
-    <tr><th>Étape</th><th>Ce qui se passe</th><th style="width:200px">Tu touches</th></tr>
-    <tr><td><b>Mois 1-2</b></td><td>Les comptes démarrent, tu postes tous les jours</td><td><b>100 €/mois</b> garantis, quoi qu'il arrive</td></tr>
-    <tr><td><b>Ça commence à prendre</b></td><td>Des vidéos passent les 100k</td><td><b>100 € + 25 € par virale</b></td></tr>
-    <tr><td><b>Le cap du million</b></td><td>1M de vues cumulées atteint</td><td><b>+ 200 €</b> d'un coup, en plus du reste</td></tr>
-    <tr><td><b>Vitesse de croisière</b></td><td>Les comptes tournent, les paliers tombent</td><td><b>500 €, iPhone, 1 000 €, MacBook...</b></td></tr>
-    <tr><td><b>Le sommet</b></td><td>100M de vues cumulées</td><td><b>🚗 La voiture.</b> Et tout ce qui précède est déjà dans ta poche</td></tr>
+    <tr><th>Étape</th><th>Tes vues dans le mois</th><th style="width:150px">Ton revenu</th></tr>
+    <tr><td><b>Mois 1-2 (les comptes démarrent)</b></td><td>~100 000</td><td><b>200 €</b></td></tr>
+    <tr><td><b>Ça commence à prendre</b></td><td>~500 000</td><td><b>600 €</b></td></tr>
+    <tr><td><b>Gros mois</b></td><td>~2 000 000</td><td><b>2 100 €</b></td></tr>
+    <tr><td><b>Mois de folie</b></td><td>10 000 000 +</td><td><b>10 100 € +</b></td></tr>
   </table>
-  <p class="note"><b>Tu gagnes dès le premier mois</b>, même quand les comptes sont neufs. Et chaque vue te rapproche du palier suivant : rien n'est jamais perdu.</p>
+  <p class="note"><b>Tu gagnes dès le premier mois</b>, même quand les comptes sont neufs. Et chaque millier de vues en plus, c'est 1 € de plus dans ta poche, sans limite.</p>
 
   <h2>Ce qu'on te fournit</h2>
   <table>
@@ -137,7 +122,7 @@
     <tr><td style="width:160px"><b>1. Test 30 jours</b></td><td>Renouvelable chaque mois si on est contents des deux côtés. Tu peux arrêter quand tu veux, nous aussi</td></tr>
     <tr><td><b>2. Les comptes</b></td><td>Ils sont à toi. On te fournit les docs pour bien les créer (prérequis, création, warmup), mais les comptes t'appartiennent : tu construis ta propre audience et ton track record, citable partout : « j'ai fait passer un compte de 0 à X »</td></tr>
     <tr><td><b>3. Post validé</b></td><td>Suit le brief de la semaine et sort le bon jour. Validation en lot chaque semaine, pas de flicage au quotidien</td></tr>
-    <tr><td><b>4. Régularité</b></td><td>Non négociable : c'est elle qui fait monter les comptes (et tes paliers)</td></tr>
+    <tr><td><b>4. Régularité</b></td><td>Non négociable : c'est elle qui fait monter les comptes (et tes vues)</td></tr>
   </table>
 
   <div class="cta"><b>Intéressé(e) ?</b><br>Réponds à ce message et on cale 15 minutes pour te montrer les formats et démarrer cette semaine.</div>

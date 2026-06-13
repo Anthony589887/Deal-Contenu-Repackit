@@ -6,50 +6,100 @@
 <title>Deal Créateur de Contenu — RepackIt</title>
 <style>
   :root{
-    --orange:#FF5C00; --dark:#141414; --dark2:#1F1F1F; --pale:#FFF3EB;
-    --grey:#6B6B6B; --line:#E8E0DA; --white:#fff;
+    --orange:#FF5C00; --orange-d:#E04E00; --dark:#141414; --dark2:#1F1F1F; --pale:#FFF3EB;
+    --grey:#6B6B6B; --line:#ECE4DE; --white:#fff; --blue:#2D6CDF;
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--dark2);background:#FAF8F6;line-height:1.5}
-  .wrap{max-width:820px;margin:0 auto;padding:0 20px 60px}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--dark2);background:#F7F4F1;line-height:1.5}
+  .wrap{max-width:900px;margin:0 auto;padding:0 22px 70px}
 
-  header{background:var(--dark);border-bottom:4px solid var(--orange);padding:28px 0;margin-bottom:36px}
-  .hwrap{max-width:820px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-  .logo{color:#fff;font-size:26px;font-weight:800}
+  /* Header */
+  header{background:linear-gradient(135deg,#1c1c1c 0%,#141414 60%);border-bottom:4px solid var(--orange);padding:30px 0}
+  .hwrap{max-width:900px;margin:0 auto;padding:0 22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+  .logo{color:#fff;font-size:27px;font-weight:800;letter-spacing:-.5px}
   .logo span{color:var(--orange)}
-  .hsub{color:#cfcfcf;font-size:12.5px;margin-top:2px}
+  .hsub{color:#cfcfcf;font-size:12.5px;margin-top:3px}
   .htag{color:#fff;font-weight:700;font-size:13px;text-align:right}
-  .htag small{display:block;color:#cfcfcf;font-weight:400;font-size:11.5px;margin-top:2px}
+  .htag small{display:block;color:#bbb;font-weight:400;font-size:11.5px;margin-top:2px}
 
-  h1{font-size:28px;line-height:1.2;margin-bottom:10px}
-  .lead{font-size:15.5px;margin-bottom:24px}
-  .lead b{color:var(--dark)}
+  /* Hero */
+  .hero{background:linear-gradient(135deg,#1c1c1c,#141414);color:#fff;padding:40px 30px 34px;border-radius:0 0 0 0}
+  .herowrap{max-width:900px;margin:0 auto;padding:0 22px}
+  h1{font-size:30px;line-height:1.18;margin-bottom:12px;color:#fff;letter-spacing:-.5px}
+  h1 .hl{color:var(--orange)}
+  .lead{font-size:15.5px;color:#dcdcdc;max-width:720px}
+  .lead b{color:#fff}
 
-  .stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
-  .stat{flex:1;min-width:150px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--orange);border-radius:10px;padding:14px 16px}
-  .stat .n{font-size:20px;font-weight:800;color:var(--dark)}
-  .stat .l{font-size:12px;color:var(--grey);margin-top:2px}
+  .stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+  .stat{flex:1;min-width:150px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-top:3px solid var(--orange);border-radius:12px;padding:14px 16px}
+  .stat .n{font-size:19px;font-weight:800;color:#fff}
+  .stat .l{font-size:12px;color:#b9b9b9;margin-top:3px}
 
-  .formula{background:var(--dark);border-radius:14px;padding:24px 22px;margin-bottom:8px;text-align:center}
-  .formula .lbl{color:#bbb;font-size:12.5px;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
-  .formula .eq{color:#fff;font-size:22px;font-weight:800;line-height:1.35}
+  /* Formula */
+  .formula{background:#fff;border:1px solid var(--line);border-left:5px solid var(--orange);border-radius:14px;padding:22px 24px;margin:30px 0 8px;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+  .formula .lbl{color:var(--orange);font-size:12px;text-transform:uppercase;letter-spacing:1.2px;font-weight:800;margin-bottom:8px}
+  .formula .eq{color:var(--dark);font-size:21px;font-weight:800;line-height:1.4}
   .formula .eq b{color:var(--orange)}
-  .formula .sub{color:#999;font-size:12.5px;margin-top:10px}
+  .formula .sub{color:var(--grey);font-size:12.5px;margin-top:8px}
 
-  h2{color:var(--orange);font-size:19px;margin:34px 0 14px}
-  table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
-  th{background:var(--dark);color:#fff;text-align:left;font-size:13px;padding:10px 12px}
-  td{padding:10px 12px;font-size:13.5px;border-bottom:1px solid var(--line);vertical-align:top}
+  h2{color:var(--dark);font-size:21px;margin:42px 0 6px;letter-spacing:-.3px}
+  h2 .accent{color:var(--orange)}
+  .h2sub{color:var(--grey);font-size:13.5px;margin-bottom:16px}
+
+  /* Format cards */
+  .fcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:0;overflow:hidden;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
+  .fhead{padding:18px 22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+  .fhead.face{background:linear-gradient(135deg,#FF5C00,#E04E00)}
+  .fhead.faceless{background:linear-gradient(135deg,#222,#141414)}
+  .fhead .t{color:#fff;font-size:18px;font-weight:800}
+  .fhead .t small{display:block;font-weight:500;font-size:12px;opacity:.9;margin-top:2px}
+  .fhead .price{background:rgba(255,255,255,.16);color:#fff;font-weight:800;font-size:16px;padding:8px 14px;border-radius:10px;white-space:nowrap}
+  .embeds{display:flex;gap:14px;flex-wrap:wrap;padding:18px 22px 22px;justify-content:center}
+  .tiktok-embed{margin:0 !important}
+
+  .tt{width:325px;max-width:100%;height:580px;border:none;border-radius:12px;background:#000;flex:0 0 auto}
+  .vidph{flex:0 0 auto;width:325px;max-width:100%;height:580px;background:#fbf7f3;border:2px dashed #E0C7B4;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+  .vidph .ph-ic{width:52px;height:52px;border-radius:50%;background:#FFE8D8;color:var(--orange);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800}
+  .vidph .ph-t{color:#9a8575;font-weight:700;font-size:14px;text-align:center}
+  .vidph .ph-t span{display:block;color:#bba894;font-size:12px;font-weight:400;margin-top:3px}
+
+  /* Tables */
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:0 2px 10px rgba(0,0,0,.04)}
+  th{background:var(--dark);color:#fff;text-align:left;font-size:13px;padding:11px 13px}
+  td{padding:11px 13px;font-size:13.5px;border-bottom:1px solid var(--line);vertical-align:top}
   tr:nth-child(even) td{background:var(--pale)}
   tr:last-child td{border-bottom:none}
   td b{color:var(--dark)}
-  .note{font-size:12.5px;color:var(--grey);margin-top:8px}
+  .note{font-size:12.5px;color:var(--grey);margin-top:9px}
 
-  .cta{background:var(--orange);color:#fff;border-radius:12px;padding:20px 22px;font-size:15.5px;margin-top:38px}
-  .cta b{font-size:17px}
+  /* Ladder */
+  .ladder{background:linear-gradient(135deg,#1c1c1c,#141414);border-radius:16px;padding:26px 24px;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+  .ladder h3{color:#fff;font-size:16px;margin-bottom:4px}
+  .ladder p{color:#aaa;font-size:12.5px;margin-bottom:18px}
+  .rung{display:flex;align-items:center;gap:16px;padding:13px 16px;border-radius:11px;margin-bottom:9px;background:#202020;border:1px solid #2c2c2c}
+  .rung .views{min-width:96px;font-weight:800;color:var(--orange);font-size:18px}
+  .rung .views small{display:block;color:#888;font-weight:400;font-size:10px;letter-spacing:.5px;margin-top:1px}
+  .rung .arrow{color:#555;font-size:15px}
+  .rung .prize{font-weight:800;color:#fff;font-size:16px}
+  .rung.big{background:linear-gradient(90deg,#2a1505,#202020);border-color:var(--orange)}
+  .rung.big .prize{color:var(--orange)}
+  .ladder .foot{color:#9a9a9a;font-size:11.5px;margin-top:13px}
 
-  footer{margin-top:34px;color:var(--grey);font-size:11.5px;display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px}
-  @media(max-width:560px){ h1{font-size:23px} .htag{text-align:left} .formula .eq{font-size:18px} }
+  .proj{background:linear-gradient(135deg,#FF5C00,#E04E00);color:#fff;border-radius:16px;padding:24px;margin-top:18px;box-shadow:0 6px 20px rgba(255,92,0,.25)}
+  .proj-lbl{font-size:12px;text-transform:uppercase;letter-spacing:1.2px;font-weight:800;opacity:.92;margin-bottom:16px}
+  .proj-grid{display:flex;gap:12px;flex-wrap:wrap}
+  .proj-grid>div{flex:1;min-width:150px;background:rgba(255,255,255,.14);border-radius:11px;padding:13px 15px}
+  .proj-grid span{display:block;font-size:12px;opacity:.9;margin-bottom:4px}
+  .proj-grid b{font-size:20px;font-weight:800;display:block}
+  .proj-grid small{font-size:11px;opacity:.82}
+  .proj-total{font-size:27px;font-weight:800;margin-top:18px;border-top:1px solid rgba(255,255,255,.25);padding-top:16px}
+  .proj-total span{font-size:14px;font-weight:600;opacity:.92}
+  .proj-note{font-size:11.5px;opacity:.9;margin-top:10px;line-height:1.5}
+  .cta{background:linear-gradient(135deg,#FF5C00,#E04E00);color:#fff;border-radius:14px;padding:22px 24px;font-size:15.5px;margin-top:40px;box-shadow:0 4px 16px rgba(255,92,0,.25)}
+  .cta b{font-size:18px}
+
+  footer{margin-top:34px;color:var(--grey);font-size:11.5px;display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px;flex-wrap:wrap;gap:6px}
+  @media(max-width:560px){ h1{font-size:24px} .htag{text-align:left} .formula .eq{font-size:17px} }
 </style>
 </head>
 <body>
@@ -64,24 +114,52 @@
   </div>
 </header>
 
-<div class="wrap">
-
-  <h1>Gère nos comptes TikTok.<br>Un deal simple : 100 €/mois + 1 € pour 1000 vues.</h1>
-  <p class="lead">Tu tournes, montes et postes <b>2 vidéos courtes par jour</b> (formats et hooks fournis) sur 2 comptes TikTok, republiées en YouTube Shorts et Reels Instagram. <b>≈ 30-45 min par jour.</b> Et la rémunération est limpide : un fixe garanti chaque mois, plus 1 € pour chaque tranche de 1000 vues. Plus tes comptes tournent, plus tu gagnes, sans plafond.</p>
-
-  <div class="stats">
-    <div class="stat"><div class="n">100 €/mois</div><div class="l">garantis dès le mois 1</div></div>
-    <div class="stat"><div class="n">+ 1 € / 1000 vues</div><div class="l">sur toutes tes vues du mois</div></div>
-    <div class="stat"><div class="n">30-45 min</div><div class="l">par jour, formats fournis</div></div>
+<div class="hero">
+  <div class="herowrap">
+    <h1>Gère nos comptes TikTok.<br>Payé chaque mois, <span class="hl">avec des bonus jusqu'à une voiture.</span></h1>
+    <p class="lead">Tu tournes, montes et postes <b>2 vidéos courtes par jour</b> (formats et hooks fournis) sur 2 comptes TikTok, republiées en YouTube Shorts et Reels Instagram. <b>≈ 30-45 min par jour.</b> Un fixe garanti, une part sur tes vues, et une échelle de récompenses qui monte avec tes résultats.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">100 €/mois</div><div class="l">garantis dès le mois 1</div></div>
+      <div class="stat"><div class="n">+ jusqu'à 1,10 €/1000 vues</div><div class="l">selon ton format</div></div>
+      <div class="stat"><div class="n">🚗 + 💻 + 📱</div><div class="l">l'échelle de bonus aux vues</div></div>
+    </div>
   </div>
+</div>
+
+<div class="wrap">
 
   <div class="formula">
     <div class="lbl">Ton revenu chaque mois</div>
-    <div class="eq"><b>100 €</b> &nbsp;+&nbsp; (tes vues du mois &divide; 1000) &nbsp;=&nbsp; <b>ton chèque</b></div>
-    <div class="sub">Exemple : 500 000 vues dans le mois → 100 € + 500 € = <b style="color:#fff">600 €</b></div>
+    <div class="eq"><b>100 €</b> &nbsp;+&nbsp; (tes vues du mois &times; ton tarif) &nbsp;+&nbsp; <b>tes bonus paliers</b></div>
+    <div class="sub">Ton tarif dépend du format que tu choisis : avec ta tête, ou faceless. On voit ça juste en dessous.</div>
   </div>
 
-  <h2>Ta mission</h2>
+  <h2>Choisis ton <span class="accent">format</span></h2>
+  <p class="h2sub">Deux façons de jouer. Tu peux faire l'une, l'autre, ou les deux. Voici des exemples concrets du type de contenu à produire.</p>
+
+  <div class="fcard">
+    <div class="fhead face">
+      <div class="t">🎤 Avec ta tête<small>Tu apparais à l'écran (face cam, voix, présence)</small></div>
+      <div class="price">1,10 € / 1000 vues</div>
+    </div>
+    <div class="embeds">
+      <iframe class="tt" src="https://www.tiktok.com/embed/v2/7642792217211309320" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen scrolling="no"></iframe>
+      <iframe class="tt" src="https://www.tiktok.com/embed/v2/7636502565177412886" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen scrolling="no"></iframe>
+    </div>
+  </div>
+
+  <div class="fcard">
+    <div class="fhead faceless">
+      <div class="t">🎬 Faceless<small>Sans visage : montage, voix off, visuels, B-roll</small></div>
+      <div class="price">0,60 € / 1000 vues</div>
+    </div>
+    <div class="embeds">
+      <iframe class="tt" src="https://www.tiktok.com/embed/v2/7496566108892171550" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen scrolling="no"></iframe>
+      <iframe class="tt" src="https://www.tiktok.com/embed/v2/7359694296104144161" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen scrolling="no"></iframe>
+    </div>
+  </div>
+
+  <h2>Ta <span class="accent">mission</span></h2>
   <table>
     <tr><th style="width:160px">Tâche</th><th>Détail</th></tr>
     <tr><td><b>Poster</b></td><td>1 vidéo/jour sur chacun des 2 comptes TikTok (= 2 posts/jour, ~60/mois)</td></tr>
@@ -91,25 +169,50 @@
   </table>
   <p class="note">Ce que tu n'as <b>pas</b> à faire : trouver les idées, la stratégie, l'analyse des stats. C'est notre taf. Toi tu exécutes et tu postes, tous les jours.</p>
 
-  <h2>Ce que tu gagnes</h2>
+  <h2>Ce que tu <span class="accent">gagnes</span></h2>
   <table>
-    <tr><th style="width:170px">Brique</th><th style="width:150px">Montant</th><th>Détail</th></tr>
-    <tr><td><b>Fixe mensuel</b></td><td><b>100 € / mois</b></td><td>Garantis, pour <b>60 posts uniques validés</b> dans le mois = <b>180 publications au total</b> avec le cross-platform (TikTok + Shorts + Reels). Au prorata si moins de 60</td></tr>
-    <tr><td><b>Part aux vues</b></td><td><b>1 € / 1000 vues</b></td><td>Sur <b>toutes les vues générées dans le mois</b>, tous comptes et toutes plateformes confondus (TikTok + Shorts + Reels). Aucun plafond</td></tr>
+    <tr><th style="width:160px">Brique</th><th style="width:170px">Montant</th><th>Détail</th></tr>
+    <tr><td><b>Fixe mensuel</b></td><td><b>100 € / mois</b></td><td>Garantis, pour <b>60 posts uniques validés</b> = <b>180 publications au total</b> avec le cross-platform. Au prorata si moins de 60</td></tr>
+    <tr><td><b>Part aux vues</b></td><td><b>1,10 €</b> (avec ta tête)<br><b>0,60 €</b> (faceless)<br>/ 1000 vues</td><td>Sur <b>toutes les vues du mois</b>, tous comptes et plateformes confondus (TikTok + Shorts + Reels). Aucun plafond</td></tr>
+    <tr><td><b>Bonus paliers</b></td><td><b>jusqu'à une voiture</b></td><td>Des récompenses one-shot quand tes vues cumulées franchissent des caps (voir l'échelle ci-dessous)</td></tr>
   </table>
-  <p class="note">Simple à calculer : tu prends tes vues du mois, tu divises par 1000, tu ajoutes 100 €. C'est ton revenu.</p>
 
-  <h2>Concrètement, ta trajectoire</h2>
+  <h2>L'échelle des <span class="accent">bonus</span></h2>
+  <p class="h2sub">Tes vues s'additionnent pour toujours. Chaque palier franchi débloque sa récompense, et ils s'empilent tous.</p>
+  <div class="ladder">
+    <h3>Vues cumulées depuis ton premier post — tous comptes et plateformes confondus.</h3>
+    <p>Chaque palier se gagne une fois. Rien ne se perd, tout s'additionne.</p>
+    <div class="rung"><div class="views">1M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">200 €</div></div>
+    <div class="rung"><div class="views">5M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">500 €</div></div>
+    <div class="rung big"><div class="views">10M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">📱 iPhone 17</div></div>
+    <div class="rung"><div class="views">25M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">1 000 €</div></div>
+    <div class="rung big"><div class="views">50M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">💻 MacBook Air</div></div>
+    <div class="rung big"><div class="views">100M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">🚗 Une voiture</div></div>
+    <div class="foot">Exemple : tu atteins 10M de vues cumulées → tu as déjà encaissé 200 € + 500 € + l'iPhone 17, en plus de ton fixe et de ta part aux vues chaque mois.</div>
+  </div>
+
+  <h2>Concrètement, ce que ça donne <span class="accent">par mois</span></h2>
   <table>
-    <tr><th>Étape</th><th>Tes vues dans le mois</th><th style="width:150px">Ton revenu</th></tr>
-    <tr><td><b>Mois 1-2 (les comptes démarrent)</b></td><td>~100 000</td><td><b>200 €</b></td></tr>
-    <tr><td><b>Ça commence à prendre</b></td><td>~500 000</td><td><b>600 €</b></td></tr>
-    <tr><td><b>Gros mois</b></td><td>~2 000 000</td><td><b>2 100 €</b></td></tr>
-    <tr><td><b>Mois de folie</b></td><td>10 000 000 +</td><td><b>10 100 € +</b></td></tr>
+    <tr><th>Tes vues dans le mois</th><th style="width:180px">🎤 Avec ta tête</th><th style="width:180px">🎬 Faceless</th></tr>
+    <tr><td>~100 000 (les comptes démarrent)</td><td><b>210 €</b></td><td><b>160 €</b></td></tr>
+    <tr><td>~500 000 (ça prend)</td><td><b>650 €</b></td><td><b>400 €</b></td></tr>
+    <tr><td>~2 000 000 (gros mois)</td><td><b>2 300 €</b></td><td><b>1 300 €</b></td></tr>
+    <tr><td>10 000 000 + (mois de folie)</td><td><b>11 100 € +</b></td><td><b>6 100 € +</b></td></tr>
   </table>
-  <p class="note"><b>Tu gagnes dès le premier mois</b>, même quand les comptes sont neufs. Et chaque millier de vues en plus, c'est 1 € de plus dans ta poche, sans limite.</p>
+  <p class="note"><b>+ les bonus paliers</b> quand tes vues cumulées franchissent 1M, 5M, 10M... (cumulés depuis le début). <b>Tu gagnes dès le premier mois</b>, même comptes neufs.</p>
 
-  <h2>Ce qu'on te fournit</h2>
+  <div class="proj">
+    <div class="proj-lbl">Projette-toi — 6 mois · avec ta tête · ~2M vues/mois</div>
+    <div class="proj-grid">
+      <div><span>Fixe garanti</span><b>600 €</b><small>6 × 100 €</small></div>
+      <div><span>Part aux vues</span><b>13 200 €</b><small>12M vues × 1,10 €/1000</small></div>
+      <div><span>Bonus paliers</span><b>700 € + 📱</b><small>1M + 5M + 10M franchis</small></div>
+    </div>
+    <div class="proj-total">≈ 13 800 € <span>+ un iPhone 17, sur 6 mois</span></div>
+    <div class="proj-note">En faceless (0,60 €/1000), la part aux vues serait de 7 200 € → ≈ 8 500 € + iPhone sur la même période. Ce sont des projections, pas des promesses — mais c'est exactement ce que le système permet.</div>
+  </div>
+
+  <h2>Ce qu'on te <span class="accent">fournit</span></h2>
   <table>
     <tr><td style="width:160px"><b>Les procédures</b></td><td>Création des comptes, warmup, configuration : pas-à-pas fournis, tu suis et c'est prêt en quelques jours</td></tr>
     <tr><td><b>Le contenu</b></td><td>Formats qui marchent, hooks de la semaine, assets (captures produit, scans, avant/après)</td></tr>
@@ -117,10 +220,10 @@
     <tr><td><b>Le paiement</b></td><td>Le jour du mois suivant à partir du moment où tu as commencé (tu démarres le 12, tu es payé le 12 du mois suivant)</td></tr>
   </table>
 
-  <h2>Les règles du jeu</h2>
+  <h2>Les <span class="accent">règles</span> du jeu</h2>
   <table>
     <tr><td style="width:160px"><b>1. Test 30 jours</b></td><td>Renouvelable chaque mois si on est contents des deux côtés. Tu peux arrêter quand tu veux, nous aussi</td></tr>
-    <tr><td><b>2. Les comptes</b></td><td>Ils sont à toi. On te fournit les docs pour bien les créer (prérequis, création, warmup), mais les comptes t'appartiennent : tu construis ta propre audience et ton track record, citable partout : « j'ai fait passer un compte de 0 à X »</td></tr>
+    <tr><td><b>2. Les comptes</b></td><td>Ils sont à toi. On te fournit les docs pour bien les créer (prérequis, création, warmup), mais les comptes t'appartiennent : tu construis ta propre audience et ton track record, citable partout</td></tr>
     <tr><td><b>3. Post validé</b></td><td>Suit le brief de la semaine et sort le bon jour. Validation en lot chaque semaine, pas de flicage au quotidien</td></tr>
     <tr><td><b>4. Régularité</b></td><td>Non négociable : c'est elle qui fait monter les comptes (et tes vues)</td></tr>
   </table>

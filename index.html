@@ -13,8 +13,11 @@
   body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--dark2);background:#F7F4F1;line-height:1.5}
   .wrap{max-width:900px;margin:0 auto;padding:0 22px 70px}
 
-  /* Header */
-  header{background:linear-gradient(135deg,#1c1c1c 0%,#141414 60%);border-bottom:4px solid var(--orange);padding:30px 0}
+  header{background:linear-gradient(135deg,#1c1c1c 0%,#141414 60%);border-bottom:4px solid var(--orange);padding:16px 0 30px}
+  .langsw{display:flex;gap:6px;justify-content:flex-end;max-width:900px;margin:0 auto 14px;padding:0 22px}
+  .langsw button{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:5px 13px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;transition:.12s}
+  .langsw button:hover{background:rgba(255,255,255,.2)}
+  .langsw button.active{background:var(--orange);border-color:var(--orange)}
   .hwrap{max-width:900px;margin:0 auto;padding:0 22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
   .logo{color:#fff;font-size:27px;font-weight:800;letter-spacing:-.5px}
   .logo span{color:var(--orange)}
@@ -22,8 +25,7 @@
   .htag{color:#fff;font-weight:700;font-size:13px;text-align:right}
   .htag small{display:block;color:#bbb;font-weight:400;font-size:11.5px;margin-top:2px}
 
-  /* Hero */
-  .hero{background:linear-gradient(135deg,#1c1c1c,#141414);color:#fff;padding:40px 30px 34px;border-radius:0 0 0 0}
+  .hero{background:linear-gradient(135deg,#1c1c1c,#141414);color:#fff;padding:40px 30px 34px}
   .herowrap{max-width:900px;margin:0 auto;padding:0 22px}
   h1{font-size:30px;line-height:1.18;margin-bottom:12px;color:#fff;letter-spacing:-.5px}
   h1 .hl{color:var(--orange)}
@@ -35,7 +37,6 @@
   .stat .n{font-size:19px;font-weight:800;color:#fff}
   .stat .l{font-size:12px;color:#b9b9b9;margin-top:3px}
 
-  /* Formula */
   .formula{background:#fff;border:1px solid var(--line);border-left:5px solid var(--orange);border-radius:14px;padding:22px 24px;margin:30px 0 8px;box-shadow:0 2px 10px rgba(0,0,0,.04)}
   .formula .lbl{color:var(--orange);font-size:12px;text-transform:uppercase;letter-spacing:1.2px;font-weight:800;margin-bottom:8px}
   .formula .eq{color:var(--dark);font-size:21px;font-weight:800;line-height:1.4}
@@ -46,7 +47,6 @@
   h2 .accent{color:var(--orange)}
   .h2sub{color:var(--grey);font-size:13.5px;margin-bottom:16px}
 
-  /* Format cards */
   .fcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:0;overflow:hidden;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,.05)}
   .fhead{padding:18px 22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
   .fhead.face{background:linear-gradient(135deg,#FF5C00,#E04E00)}
@@ -55,15 +55,9 @@
   .fhead .t small{display:block;font-weight:500;font-size:12px;opacity:.9;margin-top:2px}
   .fhead .price{background:rgba(255,255,255,.16);color:#fff;font-weight:800;font-size:16px;padding:8px 14px;border-radius:10px;white-space:nowrap}
   .embeds{display:flex;gap:14px;flex-wrap:wrap;padding:18px 22px 22px;justify-content:center}
-  .tiktok-embed{margin:0 !important}
 
   .tt{width:325px;max-width:100%;height:580px;border:none;border-radius:12px;background:#000;flex:0 0 auto}
-  .vidph{flex:0 0 auto;width:325px;max-width:100%;height:580px;background:#fbf7f3;border:2px dashed #E0C7B4;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
-  .vidph .ph-ic{width:52px;height:52px;border-radius:50%;background:#FFE8D8;color:var(--orange);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800}
-  .vidph .ph-t{color:#9a8575;font-weight:700;font-size:14px;text-align:center}
-  .vidph .ph-t span{display:block;color:#bba894;font-size:12px;font-weight:400;margin-top:3px}
 
-  /* Tables */
   table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:0 2px 10px rgba(0,0,0,.04)}
   th{background:var(--dark);color:#fff;text-align:left;font-size:13px;padding:11px 13px}
   td{padding:11px 13px;font-size:13.5px;border-bottom:1px solid var(--line);vertical-align:top}
@@ -72,7 +66,6 @@
   td b{color:var(--dark)}
   .note{font-size:12.5px;color:var(--grey);margin-top:9px}
 
-  /* Ladder */
   .ladder{background:linear-gradient(135deg,#1c1c1c,#141414);border-radius:16px;padding:26px 24px;box-shadow:0 4px 16px rgba(0,0,0,.12)}
   .ladder h3{color:#fff;font-size:16px;margin-bottom:4px}
   .ladder p{color:#aaa;font-size:12.5px;margin-bottom:18px}
@@ -105,23 +98,28 @@
 <body>
 
 <header>
+  <div class="langsw">
+    <button data-lang="fr" class="active">FR</button>
+    <button data-lang="en">EN</button>
+    <button data-lang="es">ES</button>
+  </div>
   <div class="hwrap">
     <div>
       <div class="logo">RepackIt<span>.</span></div>
       <div class="hsub">Your unfair advantage on YouTube · repackit.io</div>
     </div>
-    <div class="htag">DEAL CRÉATEUR DE CONTENU<small>Programme TikTok · Shorts · Reels</small></div>
+    <div class="htag"><span data-i18n="htag_main">DEAL CRÉATEUR DE CONTENU</span><small data-i18n="htag_sub">Programme TikTok · Shorts · Reels</small></div>
   </div>
 </header>
 
 <div class="hero">
   <div class="herowrap">
-    <h1>Gère nos comptes TikTok.<br>Payé chaque mois, <span class="hl">avec des bonus jusqu'à une voiture.</span></h1>
-    <p class="lead">Tu tournes, montes et postes <b>2 vidéos courtes par jour</b> (formats et hooks fournis) sur 2 comptes TikTok, republiées en YouTube Shorts et Reels Instagram. <b>≈ 30-45 min par jour.</b> Un fixe garanti, une part sur tes vues, et une échelle de récompenses qui monte avec tes résultats.</p>
+    <h1 data-i18n="hero_h1">Gère nos comptes TikTok.<br>Payé chaque mois, <span class="hl">avec des bonus jusqu'à une voiture.</span></h1>
+    <p class="lead" data-i18n="hero_lead">Tu tournes, montes et postes <b>2 vidéos courtes par jour</b> (formats et hooks fournis) sur 2 comptes TikTok, republiées en YouTube Shorts et Reels Instagram. <b>≈ 30-45 min par jour.</b> Un fixe garanti, une part sur tes vues, et une échelle de récompenses qui monte avec tes résultats.</p>
     <div class="stats">
-      <div class="stat"><div class="n">100 €/mois</div><div class="l">garantis dès le mois 1</div></div>
-      <div class="stat"><div class="n">+ jusqu'à 1,10 €/1000 vues</div><div class="l">selon ton format</div></div>
-      <div class="stat"><div class="n">🚗 + 💻 + 📱</div><div class="l">l'échelle de bonus aux vues</div></div>
+      <div class="stat"><div class="n" data-i18n="stat1_n">100 €/mois</div><div class="l" data-i18n="stat1_l">garantis dès le mois 1</div></div>
+      <div class="stat"><div class="n" data-i18n="stat2_n">+ jusqu'à 1,10 €/1000 vues</div><div class="l" data-i18n="stat2_l">selon ton format</div></div>
+      <div class="stat"><div class="n">🚗 + 💻 + 📱</div><div class="l" data-i18n="stat3_l">l'échelle de bonus aux vues</div></div>
     </div>
   </div>
 </div>
@@ -129,18 +127,18 @@
 <div class="wrap">
 
   <div class="formula">
-    <div class="lbl">Ton revenu chaque mois</div>
-    <div class="eq"><b>100 €</b> &nbsp;+&nbsp; (tes vues du mois &times; ton tarif) &nbsp;+&nbsp; <b>tes bonus paliers</b></div>
-    <div class="sub">Ton tarif dépend du format que tu choisis : avec ta tête, ou faceless. On voit ça juste en dessous.</div>
+    <div class="lbl" data-i18n="formula_lbl">Ton revenu chaque mois</div>
+    <div class="eq" data-i18n="formula_eq"><b>100 €</b> &nbsp;+&nbsp; (tes vues du mois &times; ton tarif) &nbsp;+&nbsp; <b>tes bonus paliers</b></div>
+    <div class="sub" data-i18n="formula_sub">Ton tarif dépend du format que tu choisis : avec ta tête, ou faceless. On voit ça juste en dessous.</div>
   </div>
 
-  <h2>Choisis ton <span class="accent">format</span></h2>
-  <p class="h2sub">Deux façons de jouer. Tu peux faire l'une, l'autre, ou les deux. Voici des exemples concrets du type de contenu à produire.</p>
+  <h2 data-i18n="h2_format">Choisis ton <span class="accent">format</span></h2>
+  <p class="h2sub" data-i18n="format_sub">Deux façons de jouer. Tu peux faire l'une, l'autre, ou les deux. Voici des exemples concrets du type de contenu à produire.</p>
 
   <div class="fcard">
     <div class="fhead face">
-      <div class="t">🎤 Avec ta tête<small>Tu apparais à l'écran (face cam, voix, présence)</small></div>
-      <div class="price">1,10 € / 1000 vues</div>
+      <div class="t" data-i18n="face_t">🎤 Avec ta tête<small>Tu apparais à l'écran (face cam, voix, présence)</small></div>
+      <div class="price" data-i18n="face_price">1,10 € / 1000 vues</div>
     </div>
     <div class="embeds">
       <iframe class="tt" src="https://www.tiktok.com/embed/v2/7642792217211309320" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen scrolling="no"></iframe>
@@ -150,8 +148,8 @@
 
   <div class="fcard">
     <div class="fhead faceless">
-      <div class="t">🎬 Faceless<small>Sans visage : montage, voix off, visuels, B-roll</small></div>
-      <div class="price">0,60 € / 1000 vues</div>
+      <div class="t" data-i18n="faceless_t">🎬 Faceless<small>Sans visage : montage, voix off, visuels, B-roll</small></div>
+      <div class="price" data-i18n="faceless_price">0,60 € / 1000 vues</div>
     </div>
     <div class="embeds">
       <iframe class="tt" src="https://www.tiktok.com/embed/v2/7496566108892171550" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen scrolling="no"></iframe>
@@ -159,79 +157,269 @@
     </div>
   </div>
 
-  <h2>Ta <span class="accent">mission</span></h2>
+  <h2 data-i18n="h2_mission">Ta <span class="accent">mission</span></h2>
   <table>
-    <tr><th style="width:160px">Tâche</th><th>Détail</th></tr>
-    <tr><td><b>Poster</b></td><td>1 vidéo/jour sur chacun des 2 comptes TikTok (= 2 posts/jour, ~60/mois)</td></tr>
-    <tr><td><b>Republier</b></td><td>Les mêmes vidéos en YouTube Shorts + Reels IG, sans watermark TikTok</td></tr>
-    <tr><td><b>Suivre le brief</b></td><td>Formats, hooks et angles fournis chaque semaine. Montage varié entre les 2 comptes</td></tr>
-    <tr><td><b>Envoyer les liens</b></td><td>Tu envoies le lien de chaque TikTok une fois posté (ça déclenche la validation et le comptage des vues)</td></tr>
+    <tr><th style="width:160px" data-i18n="mission_th1">Tâche</th><th data-i18n="mission_th2">Détail</th></tr>
+    <tr><td><b data-i18n="mission_r1a">Poster</b></td><td data-i18n="mission_r1b">1 vidéo/jour sur chacun des 2 comptes TikTok (= 2 posts/jour, ~60/mois)</td></tr>
+    <tr><td><b data-i18n="mission_r2a">Republier</b></td><td data-i18n="mission_r2b">Les mêmes vidéos en YouTube Shorts + Reels IG, sans watermark TikTok</td></tr>
+    <tr><td><b data-i18n="mission_r3a">Suivre le brief</b></td><td data-i18n="mission_r3b">Formats, hooks et angles fournis chaque semaine. Montage varié entre les 2 comptes</td></tr>
+    <tr><td><b data-i18n="mission_r4a">Envoyer les liens</b></td><td data-i18n="mission_r4b">Tu envoies le lien de chaque TikTok une fois posté (ça déclenche la validation et le comptage des vues)</td></tr>
   </table>
-  <p class="note">Ce que tu n'as <b>pas</b> à faire : trouver les idées, la stratégie, l'analyse des stats. C'est notre taf. Toi tu exécutes et tu postes, tous les jours.</p>
+  <p class="note" data-i18n="mission_note">Ce que tu n'as <b>pas</b> à faire : trouver les idées, la stratégie, l'analyse des stats. C'est notre taf. Toi tu exécutes et tu postes, tous les jours.</p>
 
-  <h2>Ce que tu <span class="accent">gagnes</span></h2>
+  <h2 data-i18n="h2_earn">Ce que tu <span class="accent">gagnes</span></h2>
   <table>
-    <tr><th style="width:160px">Brique</th><th style="width:170px">Montant</th><th>Détail</th></tr>
-    <tr><td><b>Fixe mensuel</b></td><td><b>100 € / mois</b></td><td>Garantis, pour <b>60 posts uniques validés</b> = <b>180 publications au total</b> avec le cross-platform. Au prorata si moins de 60</td></tr>
-    <tr><td><b>Part aux vues</b></td><td><b>1,10 €</b> (avec ta tête)<br><b>0,60 €</b> (faceless)<br>/ 1000 vues</td><td>Sur <b>toutes les vues du mois</b>, tous comptes et plateformes confondus (TikTok + Shorts + Reels). Aucun plafond</td></tr>
-    <tr><td><b>Bonus paliers</b></td><td><b>jusqu'à une voiture</b></td><td>Des récompenses one-shot quand tes vues cumulées franchissent des caps (voir l'échelle ci-dessous)</td></tr>
+    <tr><th style="width:160px" data-i18n="earn_th1">Brique</th><th style="width:170px" data-i18n="earn_th2">Montant</th><th data-i18n="earn_th3">Détail</th></tr>
+    <tr><td><b data-i18n="earn_r1a">Fixe mensuel</b></td><td><b data-i18n="earn_r1b">100 € / mois</b></td><td data-i18n="earn_r1c">Garantis, pour <b>60 posts uniques validés</b> = <b>180 publications au total</b> avec le cross-platform. Au prorata si moins de 60</td></tr>
+    <tr><td><b data-i18n="earn_r2a">Part aux vues</b></td><td data-i18n="earn_r2b"><b>1,10 €</b> (avec ta tête)<br><b>0,60 €</b> (faceless)<br>/ 1000 vues</td><td data-i18n="earn_r2c">Sur <b>toutes les vues du mois</b>, tous comptes et plateformes confondus (TikTok + Shorts + Reels). Aucun plafond</td></tr>
+    <tr><td><b data-i18n="earn_r3a">Bonus paliers</b></td><td><b data-i18n="earn_r3b">jusqu'à une voiture</b></td><td data-i18n="earn_r3c">Des récompenses one-shot quand tes vues cumulées franchissent des caps (voir l'échelle ci-dessous)</td></tr>
   </table>
 
-  <h2>L'échelle des <span class="accent">bonus</span></h2>
-  <p class="h2sub">Tes vues s'additionnent pour toujours. Chaque palier franchi débloque sa récompense, et ils s'empilent tous.</p>
+  <h2 data-i18n="h2_ladder">L'échelle des <span class="accent">bonus</span></h2>
+  <p class="h2sub" data-i18n="ladder_sub">Tes vues s'additionnent pour toujours. Chaque palier franchi débloque sa récompense, et ils s'empilent tous.</p>
   <div class="ladder">
-    <h3>Vues cumulées depuis ton premier post — tous comptes et plateformes confondus.</h3>
-    <p>Chaque palier se gagne une fois. Rien ne se perd, tout s'additionne.</p>
-    <div class="rung"><div class="views">1M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">200 €</div></div>
-    <div class="rung"><div class="views">5M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">500 €</div></div>
-    <div class="rung big"><div class="views">10M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">📱 iPhone 17</div></div>
-    <div class="rung"><div class="views">25M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">1 000 €</div></div>
-    <div class="rung big"><div class="views">50M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">💻 MacBook Air</div></div>
-    <div class="rung big"><div class="views">100M<small>VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">🚗 Une voiture</div></div>
-    <div class="foot">Exemple : tu atteins 10M de vues cumulées → tu as déjà encaissé 200 € + 500 € + l'iPhone 17, en plus de ton fixe et de ta part aux vues chaque mois.</div>
+    <h3 data-i18n="ladder_h3">Vues cumulées depuis ton premier post — tous comptes et plateformes confondus.</h3>
+    <p data-i18n="ladder_p">Chaque palier se gagne une fois. Rien ne se perd, tout s'additionne.</p>
+    <div class="rung"><div class="views">1M<small data-i18n="cumul_views">VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">200 €</div></div>
+    <div class="rung"><div class="views">5M<small data-i18n="cumul_views">VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">500 €</div></div>
+    <div class="rung big"><div class="views">10M<small data-i18n="cumul_views">VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">📱 iPhone 17</div></div>
+    <div class="rung"><div class="views">25M<small data-i18n="cumul_views">VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">1 000 €</div></div>
+    <div class="rung big"><div class="views">50M<small data-i18n="cumul_views">VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize">💻 MacBook Air</div></div>
+    <div class="rung big"><div class="views">100M<small data-i18n="cumul_views">VUES CUMULÉES</small></div><div class="arrow">→</div><div class="prize" data-i18n="rung6_p">🚗 Une voiture</div></div>
+    <div class="foot" data-i18n="ladder_foot">Exemple : tu atteins 10M de vues cumulées → tu as déjà encaissé 200 € + 500 € + l'iPhone 17, en plus de ton fixe et de ta part aux vues chaque mois.</div>
   </div>
 
-  <h2>Concrètement, ce que ça donne <span class="accent">par mois</span></h2>
+  <h2 data-i18n="h2_monthly">Concrètement, ce que ça donne <span class="accent">par mois</span></h2>
   <table>
-    <tr><th>Tes vues dans le mois</th><th style="width:180px">🎤 Avec ta tête</th><th style="width:180px">🎬 Faceless</th></tr>
-    <tr><td>~100 000 (les comptes démarrent)</td><td><b>210 €</b></td><td><b>160 €</b></td></tr>
-    <tr><td>~500 000 (ça prend)</td><td><b>650 €</b></td><td><b>400 €</b></td></tr>
-    <tr><td>~2 000 000 (gros mois)</td><td><b>2 300 €</b></td><td><b>1 300 €</b></td></tr>
-    <tr><td>10 000 000 + (mois de folie)</td><td><b>11 100 € +</b></td><td><b>6 100 € +</b></td></tr>
+    <tr><th data-i18n="monthly_th1">Tes vues dans le mois</th><th style="width:180px" data-i18n="monthly_th2">🎤 Avec ta tête</th><th style="width:180px" data-i18n="monthly_th3">🎬 Faceless</th></tr>
+    <tr><td data-i18n="monthly_r1">~100 000 (les comptes démarrent)</td><td><b>210 €</b></td><td><b>160 €</b></td></tr>
+    <tr><td data-i18n="monthly_r2">~500 000 (ça prend)</td><td><b>650 €</b></td><td><b>400 €</b></td></tr>
+    <tr><td data-i18n="monthly_r3">~2 000 000 (gros mois)</td><td><b>2 300 €</b></td><td><b>1 300 €</b></td></tr>
+    <tr><td data-i18n="monthly_r4">10 000 000 + (mois de folie)</td><td><b>11 100 € +</b></td><td><b>6 100 € +</b></td></tr>
   </table>
-  <p class="note"><b>+ les bonus paliers</b> quand tes vues cumulées franchissent 1M, 5M, 10M... (cumulés depuis le début). <b>Tu gagnes dès le premier mois</b>, même comptes neufs.</p>
+  <p class="note" data-i18n="monthly_note"><b>+ les bonus paliers</b> quand tes vues cumulées franchissent 1M, 5M, 10M... (cumulés depuis le début). <b>Tu gagnes dès le premier mois</b>, même comptes neufs.</p>
 
   <div class="proj">
-    <div class="proj-lbl">Projette-toi — 6 mois · avec ta tête · ~2M vues/mois</div>
+    <div class="proj-lbl" data-i18n="proj_lbl">Projette-toi — 6 mois · avec ta tête · ~2M vues/mois</div>
     <div class="proj-grid">
-      <div><span>Fixe garanti</span><b>600 €</b><small>6 × 100 €</small></div>
-      <div><span>Part aux vues</span><b>13 200 €</b><small>12M vues × 1,10 €/1000</small></div>
-      <div><span>Bonus paliers</span><b>700 € + 📱</b><small>1M + 5M + 10M franchis</small></div>
+      <div><span data-i18n="proj_g1s">Fixe garanti</span><b>600 €</b><small data-i18n="proj_g1small">6 × 100 €</small></div>
+      <div><span data-i18n="proj_g2s">Part aux vues</span><b>13 200 €</b><small data-i18n="proj_g2small">12M vues × 1,10 €/1000</small></div>
+      <div><span data-i18n="proj_g3s">Bonus paliers</span><b>700 € + 📱</b><small data-i18n="proj_g3small">1M + 5M + 10M franchis</small></div>
     </div>
-    <div class="proj-total">≈ 13 800 € <span>+ un iPhone 17, sur 6 mois</span></div>
-    <div class="proj-note">En faceless (0,60 €/1000), la part aux vues serait de 7 200 € → ≈ 8 500 € + iPhone sur la même période. Ce sont des projections, pas des promesses — mais c'est exactement ce que le système permet.</div>
+    <div class="proj-total">≈ 13 800 € <span data-i18n="proj_total_span">+ un iPhone 17, sur 6 mois</span></div>
+    <div class="proj-note" data-i18n="proj_note">En faceless (0,60 €/1000), la part aux vues serait de 7 200 € → ≈ 8 500 € + iPhone sur la même période. Ce sont des projections, pas des promesses — mais c'est exactement ce que le système permet.</div>
   </div>
 
-  <h2>Ce qu'on te <span class="accent">fournit</span></h2>
+  <h2 data-i18n="h2_provide">Ce qu'on te <span class="accent">fournit</span></h2>
   <table>
-    <tr><td style="width:160px"><b>Les procédures</b></td><td>Création des comptes, warmup, configuration : pas-à-pas fournis, tu suis et c'est prêt en quelques jours</td></tr>
-    <tr><td><b>Le contenu</b></td><td>Formats qui marchent, hooks de la semaine, assets (captures produit, scans, avant/après)</td></tr>
-    <tr><td><b>Le pilotage</b></td><td>Un point data par semaine : ce qui a marché, ce qu'on teste ensuite</td></tr>
-    <tr><td><b>Le paiement</b></td><td>Le jour du mois suivant à partir du moment où tu as commencé (tu démarres le 12, tu es payé le 12 du mois suivant)</td></tr>
+    <tr><td style="width:160px"><b data-i18n="prov_r1a">Les procédures</b></td><td data-i18n="prov_r1b">Création des comptes, warmup, configuration : pas-à-pas fournis, tu suis et c'est prêt en quelques jours</td></tr>
+    <tr><td><b data-i18n="prov_r2a">Le contenu</b></td><td data-i18n="prov_r2b">Formats qui marchent, hooks de la semaine, assets (captures produit, scans, avant/après)</td></tr>
+    <tr><td><b data-i18n="prov_r3a">Le pilotage</b></td><td data-i18n="prov_r3b">Un point data par semaine : ce qui a marché, ce qu'on teste ensuite</td></tr>
+    <tr><td><b data-i18n="prov_r4a">Le paiement</b></td><td data-i18n="prov_r4b">Le jour du mois suivant à partir du moment où tu as commencé (tu démarres le 12, tu es payé le 12 du mois suivant)</td></tr>
   </table>
 
-  <h2>Les <span class="accent">règles</span> du jeu</h2>
+  <h2 data-i18n="h2_rules">Les <span class="accent">règles</span> du jeu</h2>
   <table>
-    <tr><td style="width:160px"><b>1. Test 30 jours</b></td><td>Renouvelable chaque mois si on est contents des deux côtés. Tu peux arrêter quand tu veux, nous aussi</td></tr>
-    <tr><td><b>2. Les comptes</b></td><td>Ils sont à toi. On te fournit les docs pour bien les créer (prérequis, création, warmup), mais les comptes t'appartiennent : tu construis ta propre audience et ton track record, citable partout</td></tr>
-    <tr><td><b>3. Post validé</b></td><td>Suit le brief de la semaine et sort le bon jour. Validation en lot chaque semaine, pas de flicage au quotidien</td></tr>
-    <tr><td><b>4. Régularité</b></td><td>Non négociable : c'est elle qui fait monter les comptes (et tes vues)</td></tr>
+    <tr><td style="width:160px"><b data-i18n="rule_r1a">1. Test 30 jours</b></td><td data-i18n="rule_r1b">Renouvelable chaque mois si on est contents des deux côtés. Tu peux arrêter quand tu veux, nous aussi</td></tr>
+    <tr><td><b data-i18n="rule_r2a">2. Les comptes</b></td><td data-i18n="rule_r2b">Ils sont à toi. On te fournit les docs pour bien les créer (prérequis, création, warmup), mais les comptes t'appartiennent : tu construis ta propre audience et ton track record, citable partout</td></tr>
+    <tr><td><b data-i18n="rule_r3a">3. Post validé</b></td><td data-i18n="rule_r3b">Suit le brief de la semaine et sort le bon jour. Validation en lot chaque semaine, pas de flicage au quotidien</td></tr>
+    <tr><td><b data-i18n="rule_r4a">4. Régularité</b></td><td data-i18n="rule_r4b">Non négociable : c'est elle qui fait monter les comptes (et tes vues)</td></tr>
   </table>
 
-  <div class="cta"><b>Intéressé(e) ?</b><br>Réponds à ce message et on cale 15 minutes pour te montrer les formats et démarrer cette semaine.</div>
+  <div class="cta" data-i18n="cta"><b>Intéressé(e) ?</b><br>Réponds à ce message et on cale 15 minutes pour te montrer les formats et démarrer cette semaine.</div>
 
-  <footer><div>RepackIt · Deal créateur de contenu · 2026</div><div>repackit.io</div></footer>
+  <footer><div data-i18n="footer_left">RepackIt · Deal créateur de contenu · 2026</div><div>repackit.io</div></footer>
 </div>
 
+<script>
+const TITLES = {
+  fr: "Deal Créateur de Contenu — RepackIt",
+  en: "Content Creator Deal — RepackIt",
+  es: "Acuerdo para Creadores — RepackIt"
+};
+const I18N = {
+  fr: {
+    htag_main:"DEAL CRÉATEUR DE CONTENU", htag_sub:"Programme TikTok · Shorts · Reels",
+    hero_h1:"Gère nos comptes TikTok.<br>Payé chaque mois, <span class=\"hl\">avec des bonus jusqu'à une voiture.</span>",
+    hero_lead:"Tu tournes, montes et postes <b>2 vidéos courtes par jour</b> (formats et hooks fournis) sur 2 comptes TikTok, republiées en YouTube Shorts et Reels Instagram. <b>≈ 30-45 min par jour.</b> Un fixe garanti, une part sur tes vues, et une échelle de récompenses qui monte avec tes résultats.",
+    stat1_n:"100 €/mois", stat1_l:"garantis dès le mois 1",
+    stat2_n:"+ jusqu'à 1,10 €/1000 vues", stat2_l:"selon ton format",
+    stat3_l:"l'échelle de bonus aux vues",
+    formula_lbl:"Ton revenu chaque mois",
+    formula_eq:"<b>100 €</b> &nbsp;+&nbsp; (tes vues du mois &times; ton tarif) &nbsp;+&nbsp; <b>tes bonus paliers</b>",
+    formula_sub:"Ton tarif dépend du format que tu choisis : avec ta tête, ou faceless. On voit ça juste en dessous.",
+    h2_format:"Choisis ton <span class=\"accent\">format</span>",
+    format_sub:"Deux façons de jouer. Tu peux faire l'une, l'autre, ou les deux. Voici des exemples concrets du type de contenu à produire.",
+    face_t:"🎤 Avec ta tête<small>Tu apparais à l'écran (face cam, voix, présence)</small>", face_price:"1,10 € / 1000 vues",
+    faceless_t:"🎬 Faceless<small>Sans visage : montage, voix off, visuels, B-roll</small>", faceless_price:"0,60 € / 1000 vues",
+    h2_mission:"Ta <span class=\"accent\">mission</span>",
+    mission_th1:"Tâche", mission_th2:"Détail",
+    mission_r1a:"Poster", mission_r1b:"1 vidéo/jour sur chacun des 2 comptes TikTok (= 2 posts/jour, ~60/mois)",
+    mission_r2a:"Republier", mission_r2b:"Les mêmes vidéos en YouTube Shorts + Reels IG, sans watermark TikTok",
+    mission_r3a:"Suivre le brief", mission_r3b:"Formats, hooks et angles fournis chaque semaine. Montage varié entre les 2 comptes",
+    mission_r4a:"Envoyer les liens", mission_r4b:"Tu envoies le lien de chaque TikTok une fois posté (ça déclenche la validation et le comptage des vues)",
+    mission_note:"Ce que tu n'as <b>pas</b> à faire : trouver les idées, la stratégie, l'analyse des stats. C'est notre taf. Toi tu exécutes et tu postes, tous les jours.",
+    h2_earn:"Ce que tu <span class=\"accent\">gagnes</span>",
+    earn_th1:"Brique", earn_th2:"Montant", earn_th3:"Détail",
+    earn_r1a:"Fixe mensuel", earn_r1b:"100 € / mois", earn_r1c:"Garantis, pour <b>60 posts uniques validés</b> = <b>180 publications au total</b> avec le cross-platform. Au prorata si moins de 60",
+    earn_r2a:"Part aux vues", earn_r2b:"<b>1,10 €</b> (avec ta tête)<br><b>0,60 €</b> (faceless)<br>/ 1000 vues", earn_r2c:"Sur <b>toutes les vues du mois</b>, tous comptes et plateformes confondus (TikTok + Shorts + Reels). Aucun plafond",
+    earn_r3a:"Bonus paliers", earn_r3b:"jusqu'à une voiture", earn_r3c:"Des récompenses one-shot quand tes vues cumulées franchissent des caps (voir l'échelle ci-dessous)",
+    h2_ladder:"L'échelle des <span class=\"accent\">bonus</span>",
+    ladder_sub:"Tes vues s'additionnent pour toujours. Chaque palier franchi débloque sa récompense, et ils s'empilent tous.",
+    ladder_h3:"Vues cumulées depuis ton premier post — tous comptes et plateformes confondus.",
+    ladder_p:"Chaque palier se gagne une fois. Rien ne se perd, tout s'additionne.",
+    cumul_views:"VUES CUMULÉES", rung6_p:"🚗 Une voiture",
+    ladder_foot:"Exemple : tu atteins 10M de vues cumulées → tu as déjà encaissé 200 € + 500 € + l'iPhone 17, en plus de ton fixe et de ta part aux vues chaque mois.",
+    h2_monthly:"Concrètement, ce que ça donne <span class=\"accent\">par mois</span>",
+    monthly_th1:"Tes vues dans le mois", monthly_th2:"🎤 Avec ta tête", monthly_th3:"🎬 Faceless",
+    monthly_r1:"~100 000 (les comptes démarrent)", monthly_r2:"~500 000 (ça prend)", monthly_r3:"~2 000 000 (gros mois)", monthly_r4:"10 000 000 + (mois de folie)",
+    monthly_note:"<b>+ les bonus paliers</b> quand tes vues cumulées franchissent 1M, 5M, 10M... (cumulés depuis le début). <b>Tu gagnes dès le premier mois</b>, même comptes neufs.",
+    proj_lbl:"Projette-toi — 6 mois · avec ta tête · ~2M vues/mois",
+    proj_g1s:"Fixe garanti", proj_g1small:"6 × 100 €",
+    proj_g2s:"Part aux vues", proj_g2small:"12M vues × 1,10 €/1000",
+    proj_g3s:"Bonus paliers", proj_g3small:"1M + 5M + 10M franchis",
+    proj_total_span:"+ un iPhone 17, sur 6 mois",
+    proj_note:"En faceless (0,60 €/1000), la part aux vues serait de 7 200 € → ≈ 8 500 € + iPhone sur la même période. Ce sont des projections, pas des promesses — mais c'est exactement ce que le système permet.",
+    h2_provide:"Ce qu'on te <span class=\"accent\">fournit</span>",
+    prov_r1a:"Les procédures", prov_r1b:"Création des comptes, warmup, configuration : pas-à-pas fournis, tu suis et c'est prêt en quelques jours",
+    prov_r2a:"Le contenu", prov_r2b:"Formats qui marchent, hooks de la semaine, assets (captures produit, scans, avant/après)",
+    prov_r3a:"Le pilotage", prov_r3b:"Un point data par semaine : ce qui a marché, ce qu'on teste ensuite",
+    prov_r4a:"Le paiement", prov_r4b:"Le jour du mois suivant à partir du moment où tu as commencé (tu démarres le 12, tu es payé le 12 du mois suivant)",
+    h2_rules:"Les <span class=\"accent\">règles</span> du jeu",
+    rule_r1a:"1. Test 30 jours", rule_r1b:"Renouvelable chaque mois si on est contents des deux côtés. Tu peux arrêter quand tu veux, nous aussi",
+    rule_r2a:"2. Les comptes", rule_r2b:"Ils sont à toi. On te fournit les docs pour bien les créer (prérequis, création, warmup), mais les comptes t'appartiennent : tu construis ta propre audience et ton track record, citable partout",
+    rule_r3a:"3. Post validé", rule_r3b:"Suit le brief de la semaine et sort le bon jour. Validation en lot chaque semaine, pas de flicage au quotidien",
+    rule_r4a:"4. Régularité", rule_r4b:"Non négociable : c'est elle qui fait monter les comptes (et tes vues)",
+    cta:"<b>Intéressé(e) ?</b><br>Réponds à ce message et on cale 15 minutes pour te montrer les formats et démarrer cette semaine.",
+    footer_left:"RepackIt · Deal créateur de contenu · 2026"
+  },
+  en: {
+    htag_main:"CONTENT CREATOR DEAL", htag_sub:"TikTok · Shorts · Reels program",
+    hero_h1:"Run our TikTok accounts.<br>Paid every month, <span class=\"hl\">with bonuses up to a car.</span>",
+    hero_lead:"You film, edit and post <b>2 short videos a day</b> (formats and hooks provided) on 2 TikTok accounts, reposted as YouTube Shorts and Instagram Reels. <b>≈ 30-45 min a day.</b> A guaranteed base, a share of your views, and a rewards ladder that climbs with your results.",
+    stat1_n:"€100/month", stat1_l:"guaranteed from month 1",
+    stat2_n:"+ up to €1.10/1000 views", stat2_l:"depending on your format",
+    stat3_l:"the views bonus ladder",
+    formula_lbl:"Your monthly income",
+    formula_eq:"<b>€100</b> &nbsp;+&nbsp; (your monthly views &times; your rate) &nbsp;+&nbsp; <b>your milestone bonuses</b>",
+    formula_sub:"Your rate depends on the format you choose: on camera, or faceless. See just below.",
+    h2_format:"Choose your <span class=\"accent\">format</span>",
+    format_sub:"Two ways to play. You can do one, the other, or both. Here are concrete examples of the kind of content to produce.",
+    face_t:"🎤 On camera<small>You appear on screen (face cam, voice, presence)</small>", face_price:"€1.10 / 1000 views",
+    faceless_t:"🎬 Faceless<small>No face: editing, voice-over, visuals, B-roll</small>", faceless_price:"€0.60 / 1000 views",
+    h2_mission:"Your <span class=\"accent\">mission</span>",
+    mission_th1:"Task", mission_th2:"Detail",
+    mission_r1a:"Post", mission_r1b:"1 video/day on each of the 2 TikTok accounts (= 2 posts/day, ~60/month)",
+    mission_r2a:"Repost", mission_r2b:"The same videos as YouTube Shorts + IG Reels, without the TikTok watermark",
+    mission_r3a:"Follow the brief", mission_r3b:"Formats, hooks and angles provided every week. Vary the editing between the 2 accounts",
+    mission_r4a:"Send the links", mission_r4b:"You send the link of each TikTok once posted (this triggers validation and view counting)",
+    mission_note:"What you <b>don't</b> have to do: come up with the ideas, the strategy, the stats analysis. That's our job. You execute and post, every day.",
+    h2_earn:"What you <span class=\"accent\">earn</span>",
+    earn_th1:"Component", earn_th2:"Amount", earn_th3:"Detail",
+    earn_r1a:"Monthly base", earn_r1b:"€100 / month", earn_r1c:"Guaranteed, for <b>60 unique validated posts</b> = <b>180 publications total</b> with cross-platform. Pro-rated if fewer than 60",
+    earn_r2a:"Share of views", earn_r2b:"<b>€1.10</b> (on camera)<br><b>€0.60</b> (faceless)<br>/ 1000 views", earn_r2c:"On <b>all your views for the month</b>, across all accounts and platforms (TikTok + Shorts + Reels). No cap",
+    earn_r3a:"Milestone bonuses", earn_r3b:"up to a car", earn_r3c:"One-shot rewards when your cumulative views cross thresholds (see the ladder below)",
+    h2_ladder:"The <span class=\"accent\">bonus</span> ladder",
+    ladder_sub:"Your views add up forever. Each milestone you cross unlocks its reward, and they all stack.",
+    ladder_h3:"Cumulative views since your first post — across all accounts and platforms.",
+    ladder_p:"Each milestone is earned once. Nothing is lost, everything adds up.",
+    cumul_views:"CUMULATIVE VIEWS", rung6_p:"🚗 A car",
+    ladder_foot:"Example: you reach 10M cumulative views → you've already pocketed €200 + €500 + the iPhone 17, on top of your base and your share of views each month.",
+    h2_monthly:"Concretely, what it looks like <span class=\"accent\">per month</span>",
+    monthly_th1:"Your views in the month", monthly_th2:"🎤 On camera", monthly_th3:"🎬 Faceless",
+    monthly_r1:"~100,000 (accounts starting out)", monthly_r2:"~500,000 (it's picking up)", monthly_r3:"~2,000,000 (big month)", monthly_r4:"10,000,000 + (crazy month)",
+    monthly_note:"<b>+ the milestone bonuses</b> when your cumulative views cross 1M, 5M, 10M... (cumulative from the start). <b>You earn from the first month</b>, even with brand-new accounts.",
+    proj_lbl:"Picture it — 6 months · on camera · ~2M views/month",
+    proj_g1s:"Guaranteed base", proj_g1small:"6 × €100",
+    proj_g2s:"Share of views", proj_g2small:"12M views × €1.10/1000",
+    proj_g3s:"Milestone bonuses", proj_g3small:"1M + 5M + 10M crossed",
+    proj_total_span:"+ an iPhone 17, over 6 months",
+    proj_note:"In faceless (€0.60/1000), the share of views would be €7,200 → ≈ €8,500 + iPhone over the same period. These are projections, not promises — but it's exactly what the system allows.",
+    h2_provide:"What we <span class=\"accent\">provide</span>",
+    prov_r1a:"The procedures", prov_r1b:"Account creation, warmup, configuration: step-by-step guides provided, you follow them and it's ready in a few days",
+    prov_r2a:"The content", prov_r2b:"Formats that work, hooks of the week, assets (product captures, scans, before/after)",
+    prov_r3a:"The steering", prov_r3b:"A data check-in each week: what worked, what we test next",
+    prov_r4a:"The payment", prov_r4b:"The same day of the following month from when you started (you start on the 12th, you're paid on the 12th of the next month)",
+    h2_rules:"The <span class=\"accent\">rules</span> of the game",
+    rule_r1a:"1. 30-day trial", rule_r1b:"Renewable every month if both sides are happy. You can stop whenever you want, and so can we",
+    rule_r2a:"2. The accounts", rule_r2b:"They're yours. We provide the docs to create them properly (prerequisites, creation, warmup), but the accounts belong to you: you build your own audience and track record, citable anywhere",
+    rule_r3a:"3. Validated post", rule_r3b:"Follows the week's brief and goes out on the right day. Batch validation each week, no daily micromanaging",
+    rule_r4a:"4. Consistency", rule_r4b:"Non-negotiable: it's what grows the accounts (and your views)",
+    cta:"<b>Interested?</b><br>Reply to this message and we'll set up 15 minutes to show you the formats and start this week.",
+    footer_left:"RepackIt · Content creator deal · 2026"
+  },
+  es: {
+    htag_main:"ACUERDO PARA CREADORES DE CONTENIDO", htag_sub:"Programa TikTok · Shorts · Reels",
+    hero_h1:"Gestiona nuestras cuentas de TikTok.<br>Cobra cada mes, <span class=\"hl\">con bonos hasta un coche.</span>",
+    hero_lead:"Grabas, editas y publicas <b>2 vídeos cortos al día</b> (formatos y hooks incluidos) en 2 cuentas de TikTok, republicados como YouTube Shorts y Reels de Instagram. <b>≈ 30-45 min al día.</b> Un fijo garantizado, una parte de tus visitas y una escala de recompensas que sube con tus resultados.",
+    stat1_n:"100 €/mes", stat1_l:"garantizados desde el mes 1",
+    stat2_n:"+ hasta 1,10 €/1000 visitas", stat2_l:"según tu formato",
+    stat3_l:"la escala de bonos por visitas",
+    formula_lbl:"Tus ingresos cada mes",
+    formula_eq:"<b>100 €</b> &nbsp;+&nbsp; (tus visitas del mes &times; tu tarifa) &nbsp;+&nbsp; <b>tus bonos por hitos</b>",
+    formula_sub:"Tu tarifa depende del formato que elijas: con tu cara, o faceless. Lo vemos justo debajo.",
+    h2_format:"Elige tu <span class=\"accent\">formato</span>",
+    format_sub:"Dos formas de jugar. Puedes hacer una, la otra, o las dos. Aquí tienes ejemplos concretos del tipo de contenido a producir.",
+    face_t:"🎤 Con tu cara<small>Apareces en pantalla (cámara, voz, presencia)</small>", face_price:"1,10 € / 1000 visitas",
+    faceless_t:"🎬 Faceless<small>Sin rostro: edición, voz en off, visuales, B-roll</small>", faceless_price:"0,60 € / 1000 visitas",
+    h2_mission:"Tu <span class=\"accent\">misión</span>",
+    mission_th1:"Tarea", mission_th2:"Detalle",
+    mission_r1a:"Publicar", mission_r1b:"1 vídeo/día en cada una de las 2 cuentas de TikTok (= 2 posts/día, ~60/mes)",
+    mission_r2a:"Republicar", mission_r2b:"Los mismos vídeos como YouTube Shorts + Reels de IG, sin la marca de agua de TikTok",
+    mission_r3a:"Seguir el brief", mission_r3b:"Formatos, hooks y ángulos proporcionados cada semana. Edición variada entre las 2 cuentas",
+    mission_r4a:"Enviar los enlaces", mission_r4b:"Envías el enlace de cada TikTok una vez publicado (esto activa la validación y el conteo de visitas)",
+    mission_note:"Lo que <b>no</b> tienes que hacer: encontrar las ideas, la estrategia, el análisis de stats. Ese es nuestro trabajo. Tú ejecutas y publicas, cada día.",
+    h2_earn:"Lo que <span class=\"accent\">ganas</span>",
+    earn_th1:"Componente", earn_th2:"Importe", earn_th3:"Detalle",
+    earn_r1a:"Fijo mensual", earn_r1b:"100 € / mes", earn_r1c:"Garantizado, por <b>60 posts únicos validados</b> = <b>180 publicaciones en total</b> con cross-platform. Prorrateado si son menos de 60",
+    earn_r2a:"Parte de las visitas", earn_r2b:"<b>1,10 €</b> (con tu cara)<br><b>0,60 €</b> (faceless)<br>/ 1000 visitas", earn_r2c:"Sobre <b>todas las visitas del mes</b>, en todas las cuentas y plataformas (TikTok + Shorts + Reels). Sin límite",
+    earn_r3a:"Bonos por hitos", earn_r3b:"hasta un coche", earn_r3c:"Recompensas únicas cuando tus visitas acumuladas superan ciertos límites (ver la escala abajo)",
+    h2_ladder:"La escala de <span class=\"accent\">bonos</span>",
+    ladder_sub:"Tus visitas se suman para siempre. Cada hito que superas desbloquea su recompensa, y todos se acumulan.",
+    ladder_h3:"Visitas acumuladas desde tu primer post — en todas las cuentas y plataformas.",
+    ladder_p:"Cada hito se gana una vez. Nada se pierde, todo se suma.",
+    cumul_views:"VISITAS ACUMULADAS", rung6_p:"🚗 Un coche",
+    ladder_foot:"Ejemplo: llegas a 10M de visitas acumuladas → ya has cobrado 200 € + 500 € + el iPhone 17, además de tu fijo y tu parte de las visitas cada mes.",
+    h2_monthly:"En concreto, lo que da <span class=\"accent\">al mes</span>",
+    monthly_th1:"Tus visitas en el mes", monthly_th2:"🎤 Con tu cara", monthly_th3:"🎬 Faceless",
+    monthly_r1:"~100 000 (las cuentas arrancan)", monthly_r2:"~500 000 (empieza a despegar)", monthly_r3:"~2 000 000 (mes fuerte)", monthly_r4:"10 000 000 + (mes de locura)",
+    monthly_note:"<b>+ los bonos por hitos</b> cuando tus visitas acumuladas superan 1M, 5M, 10M... (acumuladas desde el inicio). <b>Ganas desde el primer mes</b>, incluso con cuentas nuevas.",
+    proj_lbl:"Proyéctate — 6 meses · con tu cara · ~2M visitas/mes",
+    proj_g1s:"Fijo garantizado", proj_g1small:"6 × 100 €",
+    proj_g2s:"Parte de las visitas", proj_g2small:"12M visitas × 1,10 €/1000",
+    proj_g3s:"Bonos por hitos", proj_g3small:"1M + 5M + 10M superados",
+    proj_total_span:"+ un iPhone 17, en 6 meses",
+    proj_note:"En faceless (0,60 €/1000), la parte de las visitas sería de 7 200 € → ≈ 8 500 € + iPhone en el mismo periodo. Son proyecciones, no promesas — pero es exactamente lo que el sistema permite.",
+    h2_provide:"Lo que te <span class=\"accent\">damos</span>",
+    prov_r1a:"Los procedimientos", prov_r1b:"Creación de cuentas, warmup, configuración: guías paso a paso, las sigues y está listo en pocos días",
+    prov_r2a:"El contenido", prov_r2b:"Formatos que funcionan, hooks de la semana, assets (capturas del producto, scans, antes/después)",
+    prov_r3a:"El seguimiento", prov_r3b:"Un repaso de datos cada semana: lo que funcionó, lo que probamos después",
+    prov_r4a:"El pago", prov_r4b:"El mismo día del mes siguiente desde que empezaste (empiezas el 12, cobras el 12 del mes siguiente)",
+    h2_rules:"Las <span class=\"accent\">reglas</span> del juego",
+    rule_r1a:"1. Prueba de 30 días", rule_r1b:"Renovable cada mes si ambas partes están contentas. Puedes parar cuando quieras, nosotros también",
+    rule_r2a:"2. Las cuentas", rule_r2b:"Son tuyas. Te damos los docs para crearlas bien (requisitos, creación, warmup), pero las cuentas te pertenecen: construyes tu propia audiencia y tu track record, citable en cualquier lugar",
+    rule_r3a:"3. Post validado", rule_r3b:"Sigue el brief de la semana y sale el día correcto. Validación por lotes cada semana, sin control diario",
+    rule_r4a:"4. Constancia", rule_r4b:"No negociable: es lo que hace crecer las cuentas (y tus visitas)",
+    cta:"<b>¿Te interesa?</b><br>Responde a este mensaje y reservamos 15 minutos para mostrarte los formatos y empezar esta semana.",
+    footer_left:"RepackIt · Acuerdo para creadores · 2026"
+  }
+};
+function setLang(lang){
+  document.documentElement.lang = lang;
+  if(TITLES[lang]) document.title = TITLES[lang];
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var k = el.getAttribute('data-i18n');
+    if(I18N[lang] && I18N[lang][k] !== undefined){ el.innerHTML = I18N[lang][k]; }
+  });
+  document.querySelectorAll('.langsw button').forEach(function(b){
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+}
+document.querySelectorAll('.langsw button').forEach(function(b){
+  b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang')); });
+});
+// Langue par défaut au chargement (changer 'fr' en 'en' ou 'es' pour modifier)
+setLang('fr');
+</script>
 </body>
 </html>
